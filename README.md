@@ -17,3 +17,11 @@ My first Minecraft shader
     }
   ]
 }
+void main() {
+    vec4 color = texture2D(texture0, uv0);
+
+    color.rgb *= 1.2;
+    color.b += 0.08;
+
+    gl_FragColor = color;
+}
